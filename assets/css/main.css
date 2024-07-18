@@ -10,7 +10,7 @@
   --background-color: #0c0b09; /* Background color for the entire website, including individual sections */
   --default-color: rgba(255, 255, 255, 0.7); /* Default color used for the majority of the text content across the entire website */
   --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #cda45e; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #b88a3c; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --contrast-color: #000000; /* The contrast color is used for elements when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors */
 }
 
@@ -66,7 +66,8 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(12, 11, 9, 0.61);
+  /* --background-color: rgba(8, 5, 5, 0.554); */
+  background: white;  
   color: var(--default-color);
   transition: all 0.5s;
   z-index: 997;
@@ -138,7 +139,8 @@ h6 {
 
 .header .branding {
   /* background-color: rgb(206, 195, 177); */
-  background-color: #cda45e;
+  /* background-color: #cda45e; */
+  background: white;
   min-height: 60px;
   padding: 10px 0;
   transition: 0.3s;
@@ -156,7 +158,7 @@ h6 {
 
 .header .logo h1 {
   font-size: 30px;
-  margin-top: 15px;
+  margin-top: 5px;
   font-weight: 700;
   color: rgb(228, 16, 16);
 }
@@ -202,6 +204,7 @@ h6 {
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
+    
   }
 
   .navmenu ul {
@@ -214,12 +217,18 @@ h6 {
 
   .navmenu li {
     position: relative;
+    border: 1px solid rgb(16, 4, 0); /* Tambahkan border */
+    background: rgb(188, 39, 39);
+    padding: 10px; /* Tambahkan padding untuk ruang di dalam kotak */
+    margin: 5px; /* Tambahkan margin untuk ruang di antara kotak */
+    border-radius: 5px; /* Berikan sedikit border radius untuk tampilan lebih halus */
+    transform: skew(-20deg); /* Mengubah bentuk kotak menjadi parallelogram */
+    z-index: 10;  
   }
 
   .navmenu a,
   .navmenu a:focus {
-    color: rgb(73, 30, 17);
-    padding: 18px 15px;
+    color: rgb(255, 255, 255);
     font-size: 16px;
     font-family: var(--nav-font);
     font-weight: 400;
@@ -235,6 +244,7 @@ h6 {
     font-size: 12px;
     line-height: 0;
     margin-left: 5px;
+
     transition: 0.3s;
   }
 
@@ -245,7 +255,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: rgb(182, 14, 14);
+    color: rgb(255, 255, 255);
   }
 
   .navmenu .dropdown ul {
@@ -332,6 +342,13 @@ h6 {
     transition: 0.3s;
     z-index: 9998;
     box-shadow: 0px 0px 30px color-mix(in srgb, var(--default-color), transparent 90%);
+  }
+
+  .navmenu ul li {
+    border: 1px solid var(--nav-dropdown-color); /* Tambahkan border */
+    padding: 10px; /* Tambahkan padding untuk ruang di dalam kotak */
+    margin: 5px 0; /* Tambahkan margin untuk ruang di antara kotak */
+    border-radius: 5px; /* Berikan sedikit border radius untuk tampilan lebih halus */
   }
 
   .navmenu a,
@@ -430,6 +447,12 @@ h6 {
   }
 }
 
+@media (max-width: 575px) {
+  .header .logo h1 {
+    font-size: 20px;
+  }
+}
+
 @media (max-width:575px){
   .header .logo h1 {
     font-size: 20px;
@@ -456,9 +479,11 @@ h6 {
 # Global foot
 --------------------------------------------------------------*/
 .footer{
+
+  
   color: black;
   /* background-color: rgb(206, 195, 177); */
-  background-color: #cda45e;
+  background-color: #b4a83d;
   font-size: 14px;
   padding-top: 25px;
   padding-bottom: 30px;
@@ -467,9 +492,9 @@ h6 {
 
 .foot .copyright {
   padding-top: 80px;
-  padding-bottom: 50px;
+  padding-bottom: 15px;
   color: #000000ab;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  /* border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%); */
 }
 
 .foot .copyright p {
@@ -665,8 +690,8 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  --default-color: #ffffff;
-  --background-color: #000000;
+  --default-color: #000000;
+  --background-color: transparent;
   --heading-color: #111111;
   width: 100%;
   min-height: 100vh;
@@ -705,6 +730,7 @@ section,
   margin: 0;
   font-size: 48px;
   font-weight: 700;
+  color: #000000;
 }
 
 .hero h2 span {
@@ -712,14 +738,15 @@ section,
 }
 
 .hero p {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  /* color: color-mix(in srgb, var(--default-color), transparent 20%); */
+  color: #000000;
   margin: 10px 0 0 0;
   font-size: 24px;
 }
 
 .hero .cta-btn {
   color: var(--default-color);
-  border: 2px solid var(--accent-color);
+  border: 2px solid red;
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
@@ -736,7 +763,7 @@ section,
 }
 
 .hero .cta-btn:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: color-mix(in srgb, var(--accent-color), transparent 1%);
 }
 
 @media (max-width: 480px) {
@@ -1219,6 +1246,9 @@ section,
   font-family: 'Times New Roman', Times, serif;
   font-size: 27px;
 }
+.swiper-slide .event-item .content span{
+  color: white;
+}
 .events .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
@@ -1234,17 +1264,74 @@ section,
 ----------------------------------------
 #Profil box 
 --------------------------------------------- */
+.profil-section {
+  position: relative;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(218, 177, 124);
+}
+
+.background-half {
+  position: absolute;
+  top: 0;
+  left: -10%; /* Mengatur agar background tidak terpotong */
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(to right, rgb(218, 177, 124) 60%, rgb(172, 30, 30) 40%);
+  transform: skew(-20deg); /* Mengubah bentuk kotak menjadi parallelogram */
+  z-index: 1;  
+}
+
+.profil-section .container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background: transparent; /* Pastikan background konten transparan */
+}
+
+.profil-section .container .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profil-section .container .content .profile-content {
+  max-width: 400px;
+  margin-right: 20px;
+  color: #000; /* Pastikan warna teks kontras */
+}
+
+.profil-section .container .content .profile-pentagon {
+  width: 150px;
+  height: 150px;
+  background-color: brown;
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center; 
+}
+
+
+
+
 .profil{
   justify-content: center;
   background-color: #ffffff;
 
 }
-.profil .title-custom h2{
+.profil .title-custom h2{ 
   /* background-color: #f4f4f4; */
   /* color: #000000; */
   text-align: center;
   margin-bottom: 60px;
-  color: var(--accent-color);
+  color: var(--accen  t-color);
   /* margin: 0; */
   font-size: 36px;
   font-weight: 600;
@@ -1265,25 +1352,26 @@ section,
 .box-profil {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 40px;
   width: 80%;
   margin: auto;
-}
+} 
 .box-profil .box {
-  background-color: #ffffff;
+  background-color: #b4a83d;
   /* border: 1px solid #ffffff; */
-  border: 4px double red;
-  outline: 2px solid black;
-  color: #000000;
-  padding: 25px;
+  border: 8px double rgb(228, 218, 88);
+  outline: 5px solid rgb(87, 80, 57);
+  color: #ffffff;
+  padding: 25px;  
   border-radius: 10px;
   /* box-shadow: 0 2px 10px rgba(255, 0, 0, 0.8), 0 4px 20px rgba(0, 0, 0, 0.8); */
 
 }
 .box-profil .box h2{
-  color: #000000;
+  color: #ffffff;
   /* margin-bottom: 30px; */
   text-align: center;
+  font-size: 30px;
 }
 .box-profil .box .box-p p{
   text-align: justify;
@@ -1338,8 +1426,8 @@ section,
 # Contact Section
 --------------------------------------------------------------*/
 .contact {
-  background-color: color-mix(in srgb, var(--background-color) 90%, white 5%);
-  /* background-color: rgba(202, 174, 132, 0.514); */
+  /* background-color: color-mix(in srgb, var(--background-color) 90%, white 5%); */
+  background-color: rgb(245, 245, 245);
   border-bottom: 1px solid color-mix(in srgb, var(--accent-color), transparent 90%);
 }
 
@@ -1366,11 +1454,13 @@ section,
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 5px;
+  color: #b88a3c;
 }
 
 .contact .info-item p {
   padding: 0;
   margin-bottom: 0;
+  color: #000000;
   font-size: 14px;
 }
 

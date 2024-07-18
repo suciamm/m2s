@@ -30,10 +30,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->SMTPSecure = 'tls';                          // Enable TLS encryption, ssl also accepted
             $mail->Port = 587;                                    // TCP port to connect to
 
-            // $mail->setFrom($email, $name);
-            $mail->setFrom('suciiamm@gmail.com', 'suciiamm@gmail.com');
+            $mail->setFrom('ati@cloudtech.id', 'cloudtech.id');
             // $mail->addAddress('suciiamm@gmail.com', 'suci'); // Ganti dengan email tujuan
-            $mail->addAddress($email, $name);     // Add a recipient
+            $mail->addAddress('mms.multimitraserasi@gmail.com', 'multi mitra serasi'); // Ganti dengan email tujuan
+
+            // $mail->setFrom('suciiamm@gmail.com', 'suci');
+           
+            // $mail->addAddress('ati@cloudtech.id', 'cloudtech.id'); // Ganti dengan email tujuan
+            // $mail->addAddress($email, $name);     // Add a recipient
 
             $mail->isHTML(true);
             $mail->Subject = "New Message from: $name";

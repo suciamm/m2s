@@ -603,7 +603,7 @@
       return {};
     }
     static get NAME() {
-      throw new Error('You have to implement the static method "NAME", for each component!');
+      throw new ('You have to implement the static method "NAME", for each component!');
     }
     _getConfig(config) {
       config = this._mergeConfigObj(config);
